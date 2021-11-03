@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(0, 70, 226);
+  background: linear-gradient(
+    100deg,
+    rgba(0, 70, 226, 1) 0%,
+    rgba(52, 115, 254, 1) 41%,
+    rgba(97, 146, 255, 1) 76%,
+    rgba(120, 162, 255, 1) 100%
+  );
+  background-repeat: no-repeat;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.price-table-container {
+  background: white;
+  padding: 20px 22px;
+  border-radius: 20px;
+  width: 270px;
+  margin: 15px auto;
+  transition: all 0.2s;
+  box-shadow: 2px 2px 7px 3px #7fa7ff;
+}
+
+.price-table-container:hover {
+  cursor: pointer;
+  transform: translateY(-6px);
+  box-shadow: 3px 8px 10px 5px #6090fb;
+}
+
+.price-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px #c5c5c5;
+  margin-bottom: 15px;
+}
+
+.price-heading > p {
+  margin-bottom: 10px;
+  color: #7e7777;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.duration {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 15px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+.not-available {
+  opacity: 0.35;
+}
+
+.price-tag {
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.price-button {
+  background-color: #6293ff;
+  padding: 10px;
+  width: fit-content;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+  letter-spacing: 0.5px;
+  height: 50px;
+}
+
+.price-table-container:hover .price-button {
+  cursor: pointer;
+  background-color: #2166ff;
+}
+
+svg {
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  li {
+    margin-bottom: 22px;
+  }
+
+  .container {
+    flex-direction: row;
+  }
+
+  .price-table-container {
+    width: 310px;
+  }
+
+  .price-table-container {
+    padding: 20px 30px;
+  }
+
+  .App {
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
