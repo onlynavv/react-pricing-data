@@ -74,8 +74,8 @@ function App() {
       <div className="container">
         {/* price table component getting rendered for the total number of item present in the json*/}
         {pricings.map((item)=>{
-        const {plan,price,duration,available,unavailable} = item
-        return <PriceTable plan={plan} price={price} duration={duration} available={available} unavailable={unavailable} />
+        const {plan,price,duration,available,unavailable,id} = item
+        return <PriceTable key={id} plan={plan} price={price} duration={duration} available={available} unavailable={unavailable} />
       })}
       </div>
     </div>
@@ -113,14 +113,14 @@ const PriceTable = ({plan,price,duration,available,unavailable}) => {
               // displaying the list only for the available values
               // here for free, plus, pro plans the available features vary, to avoid blank spaces or error we are displaying only to the
               // feature which is available for that plan
-              return (<li><FaCheck />
+              return (<li key={item}><FaCheck />
                 {available[`${item}`]}
               </li>)
             })}
           </ul>
           <ul className="not-available">
             {unavailableValues.map((item)=>{
-              return (<li><FaTimes />
+              return (<li key={item}><FaTimes />
                 {unavailable[`${item}`]}
               </li>)
             })}
